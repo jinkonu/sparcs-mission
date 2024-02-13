@@ -13,39 +13,12 @@
 # limitations under the License.
 
 import streamlit as st
-from streamlit.logger import get_logger
 
-LOGGER = get_logger(__name__)
-
-
-def run():
-    st.set_page_config(
-        page_title="Hello",
-        page_icon="👋",
-    )
-
-    st.write("# Welcome to Streamlit! 👋")
-
-    st.sidebar.success("Select a demo above.")
-
-    st.markdown(
-        """
-        Streamlit is an open-source app framework built specifically for
-        Machine Learning and Data Science projects.
-        **👈 Select a demo from the sidebar** to see some examples
-        of what Streamlit can do!
-        ### Want to learn more?
-        - Check out [streamlit.io](https://streamlit.io)
-        - Jump into our [documentation](https://docs.streamlit.io)
-        - Ask a question in our [community
-          forums](https://discuss.streamlit.io)
-        ### See more complex demos
-        - Use a neural net to [analyze the Udacity Self-driving Car Image
-          Dataset](https://github.com/streamlit/demo-self-driving)
-        - Explore a [New York City rideshare dataset](https://github.com/streamlit/demo-uber-nyc-pickups)
-    """
-    )
-
-
-if __name__ == "__main__":
-    run()
+if st.sidebar.button("Home"):
+    st.switch_page("mission.py")
+if st.sidebar.button("연구원 수 분포"):
+    st.switch_page("charts/rnd_population.py")
+if st.sidebar.button("과학기술혁신 역량평가지수"):
+    st.switch_page("charts/r_costii.py")
+if st.sidebar.button("총 연구개발비 추이"):
+    st.switch_page("charts/rnd_money.py")
