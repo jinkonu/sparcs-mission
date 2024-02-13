@@ -14,8 +14,8 @@
 
 import streamlit as st
 
-if st.sidebar.button("Home"):
-    st.switch_page("mission.py")
+if st.sidebar.button("홈"):
+    st.switch_page("Hello.py")
 if st.sidebar.button("연구원 수 분포"):
     st.switch_page("charts/rnd_population.py")
 if st.sidebar.button("과학기술혁신 역량평가지수"):
