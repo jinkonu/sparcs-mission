@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 plt.rc('font', family='AppleGothic')
 
 # CSV 파일을 읽어와서 데이터프레임으로 변환
-df = pd.read_csv('rnd_money.csv')
+df = pd.read_csv('pages/rnd_money.csv')
 
 # CSV 파일의 region 열을 선택지로 사용하여 multiselect 생성
 selected_regions = st.multiselect('지역 선택', options=df['region'])
